@@ -1,0 +1,174 @@
+ /* Licao 4.1: Introducao ao CSS
+  - Seletor de elemento (h1)
+  - Seletor de classe (.cartao)
+  - Seletor de id (#critico)
+ 
+  Unidades CSS mais comuns:
+  - px: tamanho fixo em pixels
+  - %: percentagem do elemento pai
+  - em: relativo ao tamanho da fonte do elemento
+  - rem: relativo ao tamanho da fonte da raiz (html)
+  - vw/vh: percentagem do tamanho da janela (viewport)
+  - vmin/vmax: menor/maior lado do viewport
+  - ch: largura aproximada do caractere "0"
+  - fr: fracao de espaco livre em CSS Grid
+*/
+
+ *{
+    border:0;
+    overflow-x: hidden;
+    padding:0;
+}
+ 
+/* h1 é o seletor */
+/* tudo isto é uma regra*/
+.cabecalho  {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    color:black;
+    font-size: 64px;
+}
+h1{
+    color:rgb(61, 165, 42);
+    font-size: 64px;
+}
+h2{
+    color:white;
+    font-size: 32px;
+}
+/* color:blue é uma declaração */
+ 
+.img{
+    width: 100px;
+    transition: transform 0.3s;
+    transform: scale(1);
+    border-radius: 50%;
+    border: 2px solid black;
+ 
+}
+a{
+    border-radius: 50%;
+   
+}
+ 
+.img:hover{
+    transform: scale(1.1)
+ 
+input{
+    border: 5px solid rgb(161, 213, 124);
+}
+ 
+input[type="text"]{
+    border: 2px dashed red;
+    border-color: yellow;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 128px;
+}
+ 
+/* .class Selecionar uma classe */
+.loja {
+    font-size: 32px;
+    color: blueviolet;
+}
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(ferragens_1.webp);
+    background-size: cover;
+}
+
+.botao{
+ display: block;
+    border: none;
+  color: blue;
+  text-align: center;
+  text-decoration: none;
+  font-size: 64px;
+  transition-duration: 0.4s;
+  position:absolute;
+  bottom: 10%;
+  left: 10%;
+  cursor: pointer;
+    
+  }
+h1 h2 {
+    color: blueviolet
+}
+/* # Selecionar um id */
+ 
+#p1{
+    font-size: 2em;
+    color:brown
+}
+#p2{
+    font-size: 1em;
+    width: 50%;
+    border: red;
+}
+#p3{
+    font-size: 0.5em;
+}
+.overlay-button {
+  /* Required: Removes button from normal flow and places it over image */
+  position: absolute; 
+  
+  /* Positioning the button (e.g., in the center) */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly centers the button */
+  
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.my-button {
+  background-color: blue;
+  transition: 0.3s; /* Smooths the visual change */
+}
+
+.my-button:hover {
+  background-color: darkblue; /* Visual feedback on hover */
+}
+
+.my-button:active {
+  transform: scale(0.95); /* Makes button look "pressed" */
+}
+.submit-btn {
+  
+  background-color: #4CAF50; /* Green background */
+  color: white;              /* White text */
+  padding: 12px 24px;         /* Vertical | Horizontal */
+  border: none;              /* Remove default border */
+  border-radius: 5px;        /* Rounded corners */
+  cursor: pointer;           /* Pointer cursor on hover */
+  font-size: 64px !important;
+  transition: 0.3s;          /* Smooth color change */
+  bottom:10%;
+  left:10%;
+  position: absolute;
+  bottom:10%;
+  left: 10%;
+}
+.voltar-btn {
+  
+  background-color: #4CAF50; /* Green background */
+  color: white;              /* White text */
+  padding: 12px 24px;         /* Vertical | Horizontal */
+  border: none;              /* Remove default border */
+  border-radius: 5px;        /* Rounded corners */
+  cursor: pointer;           /* Pointer cursor on hover */
+  font-size: 64px !important;
+  transition: 0.3s;          /* Smooth color change */
+  position: fixed;
+  bottom:10%;
+  right: 10%;
+}
+voltar-btn:hover{
+    background:red;
+    cursor: pointer;
+}
