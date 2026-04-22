@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding:0;
+}
+
+h1{
+    color:white;
+    font-size: 64px;
+    position: absolute;
+    bottom: 1px;
+    left:40vw;
+}
+
+.produtos{
+    width: 100px;
+    transition: transform 0.3s;
+    transform: scale(0.5);
+    border-radius: 50%;
+    border: 2px solid black;
+ 
+}
+a{
+    border-radius: 50%;
+    position: static;
+    bottom: 100px;
+    
+   
+}
+ 
+.produtos:hover{
+    transform: scale(1.1);
+    }
+    
+    .hero{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    top:100px;
+    left:400px;
+}
