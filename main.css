@@ -19,8 +19,7 @@ h1{
     transform: scale(0.5);
     border-radius: 50%;
     border: 2px solid black;
- 
-}
+    }
 a{
     border-radius: 50%;
     position: static;
