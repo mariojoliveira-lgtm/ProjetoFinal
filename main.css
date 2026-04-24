@@ -1,48 +1,166 @@
 *{
     margin:0;
     overflow-x: hidden;
-    overflow-y: hidden;
     padding:0;
 }
-
-h1{
-    color:white;
-    font-size: 64px;
-    position: absolute;
-    bottom: 1px;
-    left:40vw;
-}
-
-.produtos{
-    width: 100px;
-    transition: transform 0.3s;
-    transform: scale(0.5);
-    border-radius: 50%;
-    border: 2px solid black;
-    }
-a{
-    border-radius: 50%;
+.loja {
+    font-size: 32px;
+    color: white;
+    transform: scale(0.25);
     position: static;
-    bottom: 100px;
-    
-   
+    left:1px;
+    top:1px;
 }
- 
-.produtos:hover{
-    transform: scale(1.1);
+h1{
+    color:black;
+    font-size: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: auto;
     }
+h2{
+    color:white;
+    font-size: 32px;
     
-    .hero{
+    
+      }
+
+h3{
+    color:white;
+    font-size: 32px;  
+        display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: top;
+    height: auto; 
+    
+    }
+    p2{
+       left: 10px;
+    }
+.main_left{
+    transition: transform 0.3s;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+
+   
+
+ 
+    }
+
+ 
+.main_left:hover{
+    transform: scale(1.01);
+    }
+
+    .link{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    bottom: 10px;
+    right: 10px;
+    }
+
+    .imghero{
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+    }
+    .imghero:hover{
+        transform: scale(1.1);
+    }
+    .imgvoltar{
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: end;
+        width: auto;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+            position: fixed;
+    bottom: 0;
+    right: 0;
+    /* Opcional: adicione margem para não encostar na borda */
+    margin: 20px;
+    }   
+    .imgvoltar:hover{
+        transform: scale(1.1);
+    }   
+.hero{
     height: 100vh;
     width: 100vw;
     background-image: url(images/hero.jpg);
     background-size: cover;
-    top:100px;
-    left:400px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
 }
 
-.loja {
-    font-size: 32px;
-    color: blueviolet;
-    transform: scale(0.25);
+
+#p2{
+    font-size: 1em;
+    border: red;
 }
+.voltar{
+    transition: transform 0.3s;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    bottom: 10px;
+    right: 10px;
+    height: auto;
+}
+
+   
+.table{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    transform: scale(0.8);
+    left:auto;
+    top: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  display: flex; /* Alinha os itens lado a lado */
+}
+h4{
+    color:white;
+    font-size: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: auto
+    ;
+}
+h5{
+    color:white;
+    font-size: 32px;
+    position: sticky;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+} 
+p{
+    color:white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: auto
+    ;
+}  
