@@ -3,14 +3,7 @@
     overflow-x: hidden;
     padding:0;
 }
-.loja {
-    font-size: 32px;
-    color: white;
-    transform: scale(0.25);
-    position: static;
-    left:1px;
-    top:1px;
-}
+
 h1{
     color:black;
     font-size: 64px;
@@ -20,7 +13,8 @@ h1{
     align-content: center;
     height: auto;
     }
-h2{
+
+    h2{
     color:white;
     font-size: 32px;
     
@@ -35,9 +29,10 @@ h3{
     justify-content: left;
     align-content: top;
     height: auto; 
+    position: sticky;
+}
     
-    }
-    p2{
+p2{
        left: 10px;
     }
 .main_left{
@@ -164,3 +159,17 @@ p{
     height: auto
     ;
 }  
+
+th {
+  position: sticky;
+  top: 0;           /* Sticks to the very top of the scroll container */
+  z-index: 10;      /* Keeps the header above the scrolling rows */
+  background-color: #ffffff; /* Must be opaque to hide rows passing underneath */
+}
+
+table {
+    border-collapse: collapse; /* */
+}
+table, th, td {
+    border: 1px solid black;
+}   

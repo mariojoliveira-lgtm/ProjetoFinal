@@ -10,16 +10,96 @@
 <body>
 <div class="hero">
    <h1>O MOSQUITO</h1>
-      <h3>Contactos
-
+      <h3>Registo</h3>
+<br>
     <div>
         <nav>
-
-        <a href="../main.html"> <img class="imgvoltar" src="../images/voltar.png" alt=""></a>
+       <a href="../main.html"> <img class="imgvoltar" src="../images/voltar.png" alt=""></a>
         </nav>
     </div>
+<fieldset>
+    <legend><strong>Registe-se na base de dados do Mosquito para receber as últimas novidades</strong></legend>
+<!-- <h1>Formulários Básicos em HTML</h1> -->
 
-</div>
+<br
+<form action="">
+    <!-- form - elemento HTML -->
+     <!-- pode ser enviado para um URL ou para um ficheiro local-->
+
+    <label for="nome"> Nome Completo </label>
+    <input type="text" id="nome" name="nome"
+    placeholder="Digite o seu nome"
+    required minlength="5" size="50">
+    <!-- id - Identificador do input deve ser idêntico ao utilizado no for="" do label
+         type - tipo de dados que vamos introduzir
+         name - nome do campo que vai existir no servidor após envio do form
+         placeholder - texto temporário 
+         required -> obrigatoriedade de preenchimento
+         minlength -> Tamanho mínimo
+         maxlength-> Tamanho máximo-->
+
+    <label for="id_email"> Email </label>
+    <input type="email"  
+           id="id_email" 
+           name="var_email" 
+           placeholder="Digite o seu email" 
+           required 
+           minlength="10" 
+           maxlength="50"
+        > 
+   
+
+
+    <label for="pais">País</label>
+    <select name="pais" id="pais" required>
+        <!-- Select - lista vertical com opções-->
+        <option value="" disabled selected>Selecione um país</option>
+        <!-- option é o elemento da lista -->
+        <!-- value - valor enviado ao servidor -->
+        <!-- disabled - opção não disponível para envio -->
+        <!-- selected - valor selecionado por defeito -->
+        <option value="pt">Portugal</option>
+        <option value="es">Espanha</option>
+        <option value="fr">França</option>
+        <option value="ds">Alemanha</option>
+        <option value="outro">Outro</option>
+    </select>
+<br>
+    <!-- checkbox - caixa de seleção para opções múltiplas -->
+<br>
+    <label>Interesses (selecione todos os que se aplicam)</label>
+<br>
+    <input type="checkbox" id="ferragens" name="interesses" value="ferragens">
+    <label for="ferragens">Ferragens</label>
+    <input type="checkbox" id="Ferramentas" name="interesses" value="ferramentas">
+    <label for="Ferramentas">Ferramentas</label>
+
+
+
+
+    <button type="button">Enviar</button>
+</fieldset>
+<!-- Agrupar grupos de labels + inputs --> 
+
+</form>
+<style>
+  /* Borda verde para campos válidos preenchidos */
+  input:valid {
+    border: 2px solid green;
+  }
+
+  /* Borda vermelha apenas quando o campo é inválido e NÃO está vazio */
+  input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+  }
+</style>
+<br>
+<p>
+    Os nossos contactos:<br>
+    Morada: Rua do Mosquito. 30<br>
+    email: mosquito@gmail.com<br>
+    Telefone: 912345678
+</p>
 
 
  
