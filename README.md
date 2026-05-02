@@ -1,4 +1,4 @@
-# Projeto Final — UC00604 (Frontend)
+# Projeto Final — UC00604 (Frontend) - Mário OLiveira
 
 ## Objetivo
 Desenvolver um projeto pessoal com frontend completo (HTML, CSS e JavaScript), pronto para integrar backend na UC00605.
@@ -10,7 +10,17 @@ No final da UC00604, a componente frontend deve estar concluida e funcional.
 - Sem localStorage (dados ficam em memoria)
 - Validacao de formularios apenas basica (campos obrigatorios e formatos simples)
 
-## Estrutura do projeto final (fases)
+## Estrutura do projeto final
+Escolhi o tema da loja on-line.
+As funcionalidades sao 3, a saber:
+  Pagina de produtos
+  Pagina de contactos
+  Pagina de apresentacao da loja.
+A landing page chama-se main.html.
+A pagina de estilos chama-se main.css.
+
+
+
 
 ### Fase 0 — Planeamento
 - [ ] Escolher o tema do projeto
@@ -19,63 +29,22 @@ No final da UC00604, a componente frontend deve estar concluida e funcional.
 - [ ] Definir cores e tipografia base
 
 ### Fase 1 — HTML semantico 
-- [ ] Estrutura base (header, nav, main, section, footer)
-- [ ] Conteudo real (textos e placeholders coerentes)
-- [ ] Formularios com labels
-- [ ] Imagens com `alt`
+- [X] Estrutura base (header, nav, main, section, footer)
+- [X] Conteudo real (textos e placeholders coerentes)
+- [X] Formularios com labels
+- [X] Imagens com `alt`
 
 ### Fase 2 — CSS e layout
-- [ ] Layout com Flexbox e/ou Grid
-- [ ] Tipografia consistente
-- [ ] Espacamentos coerentes
+- [X] Layout com Flexbox
+- [X] Tipografia consistente
+- [X] Espacamentos coerentes
 - [ ] Responsividade (mobile + desktop)
 
-### Fase 3 — JavaScript base
-- [ ] Manipulacao do DOM
-- [ ] Eventos (clique, submit, input)
-- [ ] Atualizar UI dinamicamente
-- [ ] Dados em arrays/objetos (estado em memoria)
-- [ ] Filtros/ordenacao simples
 
 
-### Fase 4 — Refinamento 
-- [ ] Mensagens de feedback (sucesso/erro)
-- [ ] Estados vazios (ex.: "sem dados")
-- [ ] Revisao de acessibilidade
-- [ ] Limpeza de codigo
-- [ ] Validacao basica de formularios
 
-## Opcoes de projeto (escolher 1)
+#
 
-- A) Gestor de Tarefas/Projetos Pessoais
-  - Criar, concluir, editar e remover tarefas
-  - Filtros por estado e categoria
-  - Dados em array/objeto (memoria)
-
-- B) Catalogo de Produtos/Loja Simples
-  - Listar produtos com cards (imagem, titulo, preco)
-  - Pesquisa e filtro por categoria
-  - Carrinho simples em memoria
-
-- C) Quiz Interativo
-  - Perguntas em sequencia
-  - Validacao de resposta e pontuacao
-  - Barra de progresso e feedback
-
-- D) Agenda de Eventos
-  - Listar eventos e filtrar por data/categoria
-  - Favoritos em memoria
-  - Grelha de eventos
-
-- E) Blog/Diario Pessoal
-  - Listar posts e filtrar por tag
-  - Pagina de detalhe (mock)
-  - Dados em array/objeto
-
-- F) Sistema de Reservas
-  - Formulario de reserva com validacao
-  - Lista de horarios simulados
-  - Guardar reservas em memoria
 
 ## Requisitos obrigatorios
 - HTML semantico e acessivel (labels, alt, hierarquia correta)
@@ -106,14 +75,7 @@ No final da UC00604, a componente frontend deve estar concluida e funcional.
 
 ## Estrutura recomendada de ficheiros
 ```
-/projeto
-  index.html
-  pagina-lista.html
-  pagina-detalhe.html
-  styles.css
-  script.js
-  /assets
-  /pages (opcional)
+
 ```
 
 ## Entregaveis
@@ -123,14 +85,4 @@ No final da UC00604, a componente frontend deve estar concluida e funcional.
   - Funcionalidades implementadas
   - Instrucoes de uso
 
-## Avaliacao (20 valores)
-- HTML valido e semantico: 4
-- CSS organizado e responsivo: 4
-- JavaScript funcional: 6
-- Criatividade e UX: 3
-- Apresentacao e explicacao: 3
 
-## Integracao com UC00605
-- O backend vai substituir dados em memoria por API + base de dados.
-- Autenticacao e utilizadores serao adicionados em UC00605.
-- Estrutura de dados deve ser coerente para futura API (ex.: id, createdAt).

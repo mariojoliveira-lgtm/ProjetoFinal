@@ -1,7 +1,19 @@
 *{
     margin:0;
-    overflow-x: hidden;
     padding:0;
+}
+
+a {
+  display: inline-block; /* Essential for <a> tags */
+  border-radius: 50%;
+  background: bisque;
+  padding: 10px 20px;
+}
+
+body {
+  background-color:bisque; /* Your color */
+  margin: 0;                 /* Removes default browser gaps */
+  min-height: 100vh;         /* 100% of the Viewport Height */
 }
 
 h1{
@@ -12,164 +24,329 @@ h1{
     justify-content: center;
     align-content: center;
     height: auto;
+    position: sticky;
+    top: 0; /* Required: telling it where to stick */
+  z-index: 100;
     }
 
     h2{
-    color:white;
+    color:black;
     font-size: 32px;
-    
-    
+    position:sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: top;
+    top: 70px;
+    z-index: 10;
+    /* height: 50px; */
+    /* align-content: top; */
       }
 
 h3{
-    color:white;
+    color:black;
     font-size: 32px;  
-        display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-content: top;
     height: auto; 
     position: sticky;
+    /* top: 0; */
+    z-index: 10;
+    padding: 10px;
 }
-    
-p2{
-       left: 10px;
-    }
-.main_left{
-    transition: transform 0.3s;
-    transform: scale(1);
-    display: flex;
-    flex-direction: column;
-    border-radius: 50%;
-
-   
-
- 
-    }
-
- 
-.main_left:hover{
-    transform: scale(1.01);
-    }
-
-    .link{
-    display: flex;
-    flex-direction: column;
-    width: 10%;
-    bottom: 10px;
-    right: 10px;
-    }
-
     .imghero{
         width: auto;
         height: auto;
-        border-radius: 50%;
+        /* border-radius: 50%; */
+            display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    gap: 100px; /* Espaçamento entre os botões */
+    margin-top: 100px; /* Espaçamento acima dos botões */
     }
+    /*  */
     .imghero:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
+    
     .imgvoltar{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: right;
         align-items: end;
         width: auto;
         height: auto;
-        bottom: 0;
-        right: 0;
         border-radius: 50%;
-            position: fixed;
+        position: fixed;
     bottom: 0;
     right: 0;
     /* Opcional: adicione margem para não encostar na borda */
-    margin: 20px;
+    /* margin: 20px; */
     }   
+    
     .imgvoltar:hover{
         transform: scale(1.1);
+        border-radius: 50%;
     }   
 .hero{
-    height: 100vh;
-    width: 100vw;
-    background-image: url(images/hero.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    top: 0;
+   /* 1. Define the size of the "window" for the image */
+  /* width: 100%; */
+  min-height: 30%; /* Or 60vh for 60% of the screen height */
+  /* 2. Position the image inside that window */
+  /* background-image: url("../images/hero.jpg"); */
+  background-position: center; /* Centers horizontally and vertically */
+  background-repeat: no-repeat;
+  background-size: cover;      
+  display: flex;           /* Turns on Flexbox */
+  align-items: center;     /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  position: relative;
+    /* This is the magic line */
+  background-attachment: fixed; 
+  /* will-change: transform;      Fixes flickering in Chrome/Edge */
+  /* overflow: hidden;   Keeps the pseudo-element inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10%;
 }
 
-
-#p2{
-    font-size: 1em;
-    border: red;
-}
-.voltar{
-    transition: transform 0.3s;
-    transform: scale(1);
-    display: flex;
-    flex-direction: column;
-    bottom: 10px;
-    right: 10px;
-    height: auto;
+/* This is your new "Background Image" */
+.hero::before {
+  content: "";
+  position: fixed;   /* This physically pins the image to the screen */
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 35%;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  /* z-index: -1;       Puts it behind your text/button */
+  will-change: transform;
+  top: 10%;
 }
 
    
 .table{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     align-items: start;
     transform: scale(0.8);
     left:auto;
     top: auto;
+    top:300px;
+    z-index: -1;
+    overflow-y: auto; /* The scrollbar happens HERE, not on the page */
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #333;
-  display: flex; /* Alinha os itens lado a lado */
-}
-h4{
-    color:white;
-    font-size: 32px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    height: auto
-    ;
-}
-h5{
-    color:white;
-    font-size: 32px;
-    position: sticky;
-    right: 10px;
-    bottom: 10px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-} 
+
 p{
-    color:white;
+    color:black;
     font-size: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    height: auto
-    ;
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: left; */
+    height: auto;
+    margin-left: 20px; /* Adjust the number of pixels as needed */
+    margin: auto;
+    /* left: 10px; */
+    /* padding: 10px; */
+    /* margin-top: 10vh; */
 }  
 
 th {
+  color: #ff5733;
   position: sticky;
-  top: 0;           /* Sticks to the very top of the scroll container */
-  z-index: 10;      /* Keeps the header above the scrolling rows */
+  top: 100px;           /* Sticks to the very top of the scroll container */
+  z-index: 5;      /* Keeps the header above the scrolling rows */
   background-color: #ffffff; /* Must be opaque to hide rows passing underneath */
 }
 
 table {
     border-collapse: collapse; /* */
+    z-index: -1;
 }
-table, th, td {
-    border: 1px solid black;
+table, td {
+    color: black;
+    border: 2px solid black;
+    z-index: -1;
 }   
+thead, th { color: #ff5733;
+    background-color: #fff; /* Required so rows don't show through the header */
+    /* position: sticky; */
+    
+    z-index: 9;
+}
+
+th {
+    text-align: left;
+    position:sticky;
+    z-index: 10;
+    top: 100px;
+}   
+
+.formulario{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: bottom;
+    top: 50vh; */
+     /* 1. Space between the Hero Image and the Form */
+  margin-top: 600px; 
+    max-width: 100px; /* Limits the border width */
+  margin: 20px auto; /* Centers the form on the page */
+  border: 2px solid #333;
+  padding: 0;
+  top: 0;
+
+  /* 2. Center the form horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 3. The form needs a width for 'auto' to work */
+  max-width: 600px;
+  width: 90%; /* Responsive: stays 90% wide on small screens */
+
+  /* 4. Optional: Space at the very bottom of the page */
+  margin-bottom: 0;
+}  
+
+
+section {
+  height: 2000px; 
+}
+
+header {
+  position: sticky;
+  top: 0;           /* Required threshold */
+  z-index: 1000;    /* Keep it above other content */
+  background: bisque; /* Important so content doesn't bleed through */
+  height: 70px;
+}
+
+html, body {
+  /* overflow: visible !important; */
+  transform: none !important;
+  filter: none !important;
+  perspective: none !important;
+  z-index: 2;
+  margin: 0;
+  overflow: hidden; /*Remove a barra de scroll principal do navegador*/
+    height: 100%;
+  margin: 0;
+}
+
+
+.table-scroll {
+  max-height: 300px; /*Limits table height to trigger scrolling */
+  overflow-y: auto;  /*Enables the vertical scroll*/
+  border: 1px solid #ddd;
+  position: center;
+  height: calc(100vh - 100px); /* Altura total menos o espaço do teu header/botões */
+}
+
+table {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: fixed; /* Forces the 4 columns to be equal width */
+  /* position: center; */
+    width: auto;       /* Largura definida pelo texto */
+  margin-left: auto; /* Empurra da esquerda */
+  margin-right: auto;/* Empurra da direita */
+}
+
+th {
+  position: sticky;  /* Fixes the header to the top of the container */
+  top: 0;
+  background: #333;  /* Solid color prevents rows from bleeding through */
+  color: white;
+  padding: 10px;
+  z-index: 5;        /* Keeps header above the scrolling content */
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+button {
+  /* 1. Reset browser defaults to stop the "growing" issue */
+  appearance: none;
+  border: none;
+  margin: 0;
+  
+  /* 2. Fix the rounding */
+  border-radius: 999px; 
+  
+  /* 3. Ensure it behaves like a block/inline-block */
+  display: inline-block;
+  
+  /* 4. Visuals */
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer; /* Makes it feel like a link */
+}
+
+.pill-btn {
+  /* 1. Reset for both <a> and <button> */
+  display: inline-block;
+  text-decoration: none; /* Removes underline from <a> */
+  border: none;          /* Removes border from <button> */
+  cursor: pointer;
+  
+  /* 2. The Pill Look */
+  border-radius: 999px;
+  background-color: #007bff;
+  color: bisque;
+  
+  /* 3. Equal Sizing */
+  padding: 12px 28px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: center;
+          position: fixed;
+    bottom: 0;
+    right: 0;
+    /* gap: 100px; */
+}
+
+.image-link {
+  display: inline-block;
+  border-radius: 999px; /* The Pill Look */
+  overflow: hidden;    /* Clips the image to the rounded corners */
+  border: 2px solid #007bff;
+  line-height: 0;      /* Removes tiny ghost space at the bottom */
+  transition: transform 0.2s;
+}
+
+.image-link img {
+  width: 50px;         /* Control your image size here */
+  height: 50px;
+  display: block;
+  /* gap: 100px; */
+  margin: 0 100px;
+}
+
+.image-link:hover {
+  transform: scale(1.1); /* Subtle pop effect on hover */
+}
+
+body {
+  padding-left: 1%; /* Using percentages makes it responsive on different screens */
+  padding-right: 1%;
+  /* padding-top: 70px; Must match the header's height */
+}
+
+  .image-gallery {
+    display: flex;       /* Aligns links in a row */
+    gap: 100px;           /* Exact space between the images */
+    justify-content: center; /* Centers the whole group (optional) */
+    flex-wrap: wrap;     /* Allows links to drop to next line on small screens */
+  }
